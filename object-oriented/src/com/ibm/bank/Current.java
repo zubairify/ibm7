@@ -30,7 +30,7 @@ public class Current extends Accounts {
 	}
 
 	@Override
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws BalanceException {
 		if(amount <= (balance + overdraft)) {
 			balance -= amount;
 			if(balance < MIN_CURRENT_BAL) {
@@ -39,6 +39,6 @@ public class Current extends Accounts {
 			}
 			txns[idx ++] = new CurrentTransaction("Dr", amount, balance, overdraft);
 		} else
-			System.out.println("Insufficient balance");
+			throw new BalanceException("Insufficient balance");
 	}
 }

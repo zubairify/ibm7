@@ -10,7 +10,7 @@ public interface Bank {
 	
 	// Behaviours of application
 	void deposit(double amount);
-	void withdraw(double amount);
+	void withdraw(double amount) throws BalanceException;
 	void summary();
 	void statement();
 }

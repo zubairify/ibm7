@@ -41,7 +41,7 @@ public abstract class Accounts implements Bank {
 		txns[idx ++] = new Transaction("Cr", amount, balance);
 	}
 	
-	public abstract void withdraw(double amount);
+	public abstract void withdraw(double amount) throws BalanceException;
 	
 	public void statement() {
 		System.out.println("Statement of A/C No: " + acntNo);
