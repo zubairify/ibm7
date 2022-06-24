@@ -17,7 +17,7 @@ public class StreamDemo1 {
 		Stream<Integer> str1 = numbers.stream();
 		str1.forEach(System.out::println);	// Terminal operation
 		// Performing operation again shall give an error as stream is closed
-		str1.forEach(System.out::println);
+//		str1.forEach(System.out::println);
 
 		// Shorthand to do the same
 		numbers.stream().forEach(System.out::println); // forEach() is terminal operation
