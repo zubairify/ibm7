@@ -8,6 +8,7 @@ public class ExchangeConfig {
 
 	@Bean("xe")
 	public ExchangeService getService() {
+		System.out.println("Exchange service object returned");
 		return new ExchangeService();
 	}
 	
